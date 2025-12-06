@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>⚔️ Clash Arena - Battle Royale</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Supercell-Magic:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Partículas de fundo -->
+    <div id="particles"></div>
+    
+    <div id="game-container">
+        <!-- Tela inicial -->
+        <div id="menu-screen">
+            <div class="menu-bg"></div>
+            <div class="menu-content">
+                <div class="logo-container">
+                    <h1 class="game-title">CLASH</h1>
+                    <h2 class="game-subtitle">ARENA</h2>
+                </div>
+                <div class="menu-decorations">
+                    <div class="sword left">⚔️</div>
+                    <div class="shield">🛡️</div>
+                    <div class="sword right">⚔️</div>
+                </div>
+                <p class="tagline">Destrua as torres. Conquiste a vitória!</p>
+                <button id="start-btn">
+                    <span class="btn-text">BATALHAR</span>
+                    <span class="btn-icon">⚔️</span>
+                </button>
+                <div class="menu-troops">
+                    <span>🗡️</span>
+                    <span>🏹</span>
+                    <span>👹</span>
+                    <span>🔥</span>
+                    <span>💀</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Tela do jogo -->
+        <div id="game-screen" class="hidden">
+            <!-- HUD Superior -->
+            <div id="top-hud">
+                <div class="player-info enemy-info">
+                    <div class="player-avatar enemy-avatar">👿</div>
+                    <div class="player-details">
+                        <span class="player-name">Inimigo</span>
+                        <div class="crowns">
+                            <span id="enemy-crowns">👑 0</span>
+                        </div>
+                    </div>
+                </div>
+                <div id="timer-container">
+                    <div id="timer">3:00</div>
+                    <div id="overtime-indicator" class="hidden">⚡ PRORROGAÇÃO</div>
+                </div>
+                <div class="player-info player-info-right">
+                    <div class="player-details">
+                        <span class="player-name">Você</span>
+                        <div class="crowns">
+                            <span id="player-crowns">👑 0</span>
+                        </div>
+                    </div>
+                    <div class="player-avatar player-avatar-you">😎</div>
+                </div>
+            </div>
+
+            <!-- Arena Canvas -->
+            <canvas id="arena"></canvas>
+
+            <!-- Indicadores de dano flutuantes -->
+            <div id="damage-numbers"></div>
+
+            <!-- HUD Inferior -->
+            <div id="bottom-hud">
+                <!-- Barra de Elixir -->
+                <div id="elixir-container">
+                    <div id="elixir-icon">💧</div>
+                    <div id="elixir-bar">
+                        <div id="elixir-fill"></div>
+                        <div id="elixir-segments"></div>
+                    </div>
+                    <div id="elixir-count">5</div>
+                </div>
+
+                <!-- Cartas -->
+                <div id="cards-container">
+                    <div id="next-card-container">
+                        <div id="next-card" class="card-slot">
+                            <div class="next-card-label">PRÓX</div>
+                        </div>
+                    </div>
+                    <div id="hand-cards"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Tela de fim de jogo -->
+        <div id="end-screen" class="hidden">
+            <div class="end-overlay"></div>
+            <div class="end-content">
+                <div id="result-banner">
+                    <h2 id="result-text">VITÓRIA!</h2>
+                </div>
+                <div id="crowns-earned">
+                    <span class="crown">👑</span>
+                    <span class="crown">👑</span>
+                    <span class="crown">👑</span>
+                </div>
+                <div id="battle-stats">
+                    <div class="stat">
+                        <span class="stat-label">Torres Destruídas</span>
+                        <span id="towers-destroyed" class="stat-value">0</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-label">Tropas Invocadas</span>
+                        <span id="troops-spawned" class="stat-value">0</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-label">Dano Total</span>
+                        <span id="total-damage" class="stat-value">0</span>
+                    </div>
+                </div>
+                <button id="restart-btn">
+                    <span class="btn-text">JOGAR NOVAMENTE</span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script src="game2.js"></script>
+    <script src="graphics.js"></script>
+</body>
+</html>
