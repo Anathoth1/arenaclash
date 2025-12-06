@@ -1211,3 +1211,298 @@ body {
     background: linear-gradient(180deg, #9b59b6 0%, #6c3483 100%);
     margin-top: 10px;
 }
+
+/* ==================== RESPONSIVO MOBILE ==================== */
+@media screen and (max-width: 600px) {
+    body {
+        align-items: flex-start;
+    }
+    
+    #game-container {
+        max-width: 100vw;
+        max-height: 100vh;
+        height: 100vh;
+        height: 100dvh; /* Dynamic viewport height para mobile */
+        border-radius: 0;
+    }
+    
+    /* Menu */
+    .game-title {
+        font-size: 2.5rem !important;
+    }
+    
+    .game-subtitle {
+        font-size: 1.5rem !important;
+    }
+    
+    .menu-btn, #start-btn, #restart-btn, #deck-btn {
+        padding: 12px 30px !important;
+        font-size: 1rem !important;
+    }
+    
+    .tagline {
+        font-size: 0.85rem !important;
+    }
+    
+    /* HUD Superior */
+    #top-hud {
+        padding: 5px 8px !important;
+        gap: 5px !important;
+    }
+    
+    .player-avatar {
+        width: 30px !important;
+        height: 30px !important;
+        font-size: 1rem !important;
+    }
+    
+    .player-name {
+        font-size: 0.7rem !important;
+    }
+    
+    #timer {
+        font-size: 1.2rem !important;
+        padding: 4px 12px !important;
+    }
+    
+    /* HUD Inferior */
+    #bottom-hud {
+        padding: 8px !important;
+        gap: 8px !important;
+    }
+    
+    #elixir-container {
+        gap: 6px !important;
+    }
+    
+    #elixir-icon {
+        font-size: 1.2rem !important;
+    }
+    
+    #elixir-bar {
+        height: 18px !important;
+    }
+    
+    #elixir-count {
+        font-size: 1rem !important;
+        min-width: 24px !important;
+    }
+    
+    /* Cartas */
+    #cards-container {
+        gap: 6px !important;
+    }
+    
+    #hand-cards {
+        gap: 4px !important;
+    }
+    
+    .card {
+        width: 58px !important;
+        min-width: 58px !important;
+        padding: 4px !important;
+    }
+    
+    .card-cost {
+        width: 18px !important;
+        height: 18px !important;
+        font-size: 0.7rem !important;
+        top: -6px !important;
+        left: -6px !important;
+    }
+    
+    .card-icon {
+        font-size: 1.4rem !important;
+    }
+    
+    .card-name {
+        font-size: 0.5rem !important;
+    }
+    
+    #next-card-container {
+        margin-right: 4px !important;
+    }
+    
+    #next-card {
+        width: 45px !important;
+        height: 55px !important;
+    }
+    
+    .next-card-label {
+        font-size: 0.5rem !important;
+    }
+    
+    /* Modais */
+    .modal-content {
+        width: 95% !important;
+        max-width: 95vw !important;
+        max-height: 85vh !important;
+        padding: 15px !important;
+        margin: 10px !important;
+    }
+    
+    .modal-content h2 {
+        font-size: 1.3rem !important;
+    }
+    
+    .stages-grid {
+        max-height: 40vh !important;
+    }
+    
+    .stage-item {
+        padding: 10px 12px !important;
+        font-size: 0.85rem !important;
+    }
+    
+    .modal-buttons {
+        flex-wrap: wrap !important;
+        gap: 8px !important;
+    }
+    
+    .modal-buttons button {
+        padding: 10px !important;
+        font-size: 0.85rem !important;
+    }
+    
+    /* Deck Editor */
+    .deck-grid, .avail-grid {
+        grid-template-columns: repeat(4, 1fr) !important;
+        gap: 8px !important;
+    }
+    
+    .deck-card, .avail-card {
+        padding: 8px 4px !important;
+    }
+    
+    .deck-card span, .avail-card span {
+        font-size: 1.4rem !important;
+    }
+    
+    .deck-card small, .avail-card small {
+        font-size: 0.55rem !important;
+    }
+    
+    /* Upgrades */
+    .upgrade-grid {
+        max-height: 45vh !important;
+    }
+    
+    .upgrade-card {
+        padding: 8px !important;
+        gap: 8px !important;
+    }
+    
+    .up-icon {
+        font-size: 1.4rem !important;
+    }
+    
+    .up-name {
+        font-size: 0.75rem !important;
+    }
+    
+    .up-btn {
+        padding: 6px 10px !important;
+        font-size: 0.7rem !important;
+    }
+    
+    /* Emotes */
+    #emote-bar {
+        bottom: 180px !important;
+        right: 5px !important;
+    }
+    
+    .emote-btn {
+        width: 32px !important;
+        height: 32px !important;
+        font-size: 1rem !important;
+    }
+    
+    /* Tela de Fim */
+    #result-text {
+        font-size: 2rem !important;
+    }
+    
+    #crowns-earned .crown {
+        font-size: 2rem !important;
+    }
+    
+    .stat {
+        padding: 8px !important;
+    }
+    
+    .stat-value {
+        font-size: 1.2rem !important;
+    }
+    
+    .stat-label {
+        font-size: 0.7rem !important;
+    }
+}
+
+/* Telas muito pequenas */
+@media screen and (max-width: 380px) {
+    .card {
+        width: 52px !important;
+        min-width: 52px !important;
+    }
+    
+    .card-icon {
+        font-size: 1.2rem !important;
+    }
+    
+    #next-card {
+        width: 40px !important;
+        height: 50px !important;
+    }
+    
+    .deck-grid, .avail-grid {
+        grid-template-columns: repeat(4, 1fr) !important;
+        gap: 6px !important;
+    }
+}
+
+/* Landscape mobile */
+@media screen and (max-height: 500px) and (orientation: landscape) {
+    #game-container {
+        max-width: 100%;
+        height: 100vh;
+        height: 100dvh;
+    }
+    
+    #top-hud {
+        padding: 3px 8px !important;
+    }
+    
+    #bottom-hud {
+        padding: 5px !important;
+    }
+    
+    .card {
+        width: 50px !important;
+        min-width: 50px !important;
+        padding: 3px !important;
+    }
+    
+    #elixir-bar {
+        height: 14px !important;
+    }
+}
+
+/* Touch improvements */
+@media (hover: none) and (pointer: coarse) {
+    .card {
+        transition: transform 0.1s, box-shadow 0.1s !important;
+    }
+    
+    .card:active {
+        transform: scale(0.95) !important;
+    }
+    
+    .deck-card .rm {
+        opacity: 1 !important;
+    }
+    
+    button:active {
+        transform: scale(0.98) !important;
+    }
+}
